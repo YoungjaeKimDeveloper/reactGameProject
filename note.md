@@ -17,3 +17,4 @@
 
 1. Wrtie meaningful variable name
 2. Lift the state up to the cloest ancestor component that has access to all components that need to work with that sate.(Lifting State up)
+3. Lift the state up to the closest ancestor component that has access to all components that need to wrok with that state(to summarize, cloest ancestor can acess theboth child componenet, we can create the component tree)
