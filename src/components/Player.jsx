@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-const Player = ({ name, symbol }) => {
+const Player = ({ name, symbol, isActive }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [playerName, setPlayerName] = useState(name);
   const handleEditClick = () => {
@@ -10,7 +10,7 @@ const Player = ({ name, symbol }) => {
     setPlayerName(e.target.value);
   };
   return (
-    <li>
+    <li className={isActive ? "active" : undefined}>
       <span className="player">
         {/* Get the user input and change the name */}
         {isEditing ? (
@@ -21,7 +21,7 @@ const Player = ({ name, symbol }) => {
             onChange={(e) => handleUserName(e)}
           />
         ) : (
-          <span className="player-name">{playerName}</span>
+          <span className="player-name ">{playerName}</span>
         )}
         <span className="player-symbol">{symbol}</span>
       </span>
